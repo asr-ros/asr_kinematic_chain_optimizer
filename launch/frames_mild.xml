@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<Data>
+	<Frames>    
+	  <Frame name="base_link" base="" x="0" y="0" z="0" />
+	  <Frame name="base_laser" base="base_link" x="0.27" y="0" z="0.22" />
+	  <Frame name="ptu_pan_link" base="base_link" x="0.0" y="0.0" z="1.35" min_x="-0.3" max_x="0.3" min_y="-0.5" max_y="-0.1"  min_z="1.0" max_z="1.5" min_rx="-4.0" max_rx="4.0" min_ry="-4.0" max_ry="4.0" min_rz="-4.0" max_rz="4.0" />
+	  <Frame name="PanRotated" base="ptu_pan_link" x="0" y="0" z="0" a="([8])*0.01745329251" data="true"/>
+	  <Frame name="TILTBase" base="PanRotated" x="0" y="0" z="0"  min_x="-0.1" max_x="0.1" min_y="-0.1" max_y="0.1"  min_z="-0.1" max_z="0.1" min_rx="-4.0" max_rx="4.0" min_ry="-4.0" max_ry="4.0" min_rz="-4.0" max_rz="4.0" />
+	  <Frame name="TILTRotated" base="TILTBase" x="0" y="0" z="0" g="([9])*0.01745329251" />
+	  <Frame name="PTU" base="TILTRotated" x="0" y="0" z="0" min_x="-0.1" max_x="0.1" min_y="-0.1" max_y="0.1"  min_z="-0.1" max_z="0.1" min_rx="-4.0" max_rx="4.0" min_ry="-4.0" max_ry="4.0" min_rz="-4.0" max_rz="4.0" />
+	  
+	  <Frame name="PTUOffset" base="base_laser" qx="([1])" qy="([2])" qz="([3])" qw="([4])" x="([5])" y="([6])" z="([7])" data="true"/>
+	</Frames>
+
+	<Goal>
+	  <Position first="PTU" second="PTUOffset"/>
+	  <Orientation first="PTU" second="PTUOffset"/>
+	</Goal>
+ 
+</Data>
+
+
+
+

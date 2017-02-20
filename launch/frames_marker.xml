@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<Data>
+	<Frames>    
+	  <Frame name="MarkerBase" base="" />
+	  <Frame name="MarkerLeftOffset" base="MarkerBase" qx="([1])" qy="([2])" qz="([3])" qw="([4])" x="([5])" y="([6])" z="([7])" data="true"/>
+	  <Frame name="MarkerLeft" base="MarkerLeftOffset" x="0.1" y="0.001" z="0.1"  min_x="-0.3" max_x="0.3" min_y="-0.3" max_y="0.3"  min_z="-0.3" max_z="0.3" min_ry="-3.0" max_ry="3.0" min_rx="-3.0" max_rx="3.0" min_rz="-3.0" max_rz="3.0" />
+	</Frames>
+
+	<Goal>
+	  <Position first="MarkerLeft" second="MarkerBase"  />
+	  <Orientation first="MarkerLeft" second="MarkerBase"  />
+	</Goal>
+ 
+</Data>
+
+
+
+

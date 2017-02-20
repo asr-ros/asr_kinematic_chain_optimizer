@@ -1,0 +1,6 @@
+   Rosenbrock algorithm
+===========================
+
+(c) Dr. Ir. Frank Vanden Berghen
+For further details see: http://applied-mathematics.net/
+email: frank@applied-mathematics.net
