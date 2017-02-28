@@ -1,5 +1,5 @@
 <launch>
-	<node pkg="kinematic_chain_optimizer" type="kinematic_chain_optimizer" name="kinematic_chain_optimizer"  
+	<node pkg="asr_kinematic_chain_optimizer" type="kinematic_chain_optimizer" name="kinematic_chain_optimizer"  
 	args="--filename $(find asr_kinematic_chain_optimizer)/launch/CalibrationData.data --cfg $(find asr_kinematic_chain_optimizer)/launch/frames_marker.xml --debug 5 --max 10000 --iterations 500000 --trim 0 --ivlinewidth 0.01 --ivsphereradius 0.5 --ivcoordscale 0.05 --always false --debugiterations 100000  --epsilon 0.000000001" output="screen">
 
 	</node>
