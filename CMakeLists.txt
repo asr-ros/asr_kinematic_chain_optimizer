@@ -1,13 +1,14 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(asr_kinematic_chain_optimizer)
 
-find_package(catkin REQUIRED COMPONENTS
-  asr_muparser
-)
+find_package(catkin REQUIRED COMPONENTS)
 
 find_package(cmake_modules REQUIRED)
 find_package(Boost COMPONENTS program_options REQUIRED)
 find_package(TinyXML REQUIRED)
+
+find_package(PkgConfig)
+pkg_check_modules (MUPARSER REQUIRED muparser)
 
 catkin_package(
   INCLUDE_DIRS include)
@@ -16,7 +17,9 @@ include_directories(include
     ${catkin_INCLUDE_DIRS} 
     ${CMAKE_CURRENT_BINARY_DIR}
     ${TinyXML_INCLUDE_DIR}
-    ${Boost_INCLUDE_DIR})
+    ${Boost_INCLUDE_DIR}
+    ${MUPARSER_INCLUDE_DIRS}
+    )
 
 add_executable(kinematic_chain_optimizer
     src/main.cpp
@@ -37,7 +40,7 @@ target_link_libraries(kinematic_chain_optimizer
     ${Boost_LIBRARIES}
     ${TinyXML_LIBRARIES}
     ${CMAKE_LIBRARIES}
-    asr_muparser
+    ${MUPARSER_LIBRARIES}
  )
 
 install(TARGETS kinematic_chain_optimizer
