@@ -6,6 +6,7 @@
   <author>Aumann Florian, Heller Florian, Jäkel Rainer, Wittenbeck Valerij</author>
   <maintainer email="asr-ros@lists.kit.edu">Meißner Pascal</maintainer>
   <license>BSD</license>
+  <url type="website">http://ros.org/wiki/asr_kinematic_chain_optimizer</url>
   
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>cmake_modules</build_depend>
