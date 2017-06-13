@@ -435,12 +435,10 @@ void COptimizer::reset()
   valueSetters.clear();
   data.clear();
 
-  for (unsigned int i=0; i<globalFunctions.size(); i++)
-    delete globalFunctions[i];
+
   globalFunctions.clear();
 
-  for (unsigned int i=0; i<functions.size(); i++)
-    delete functions[i];
+
   functions.clear();
 
   information.clear();
